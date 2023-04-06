@@ -1,0 +1,144 @@
+body {
+  background-color: #042940;
+}
+p,
+svg,
+button,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: transparent;
+  border-bottom: 1px solid #dbf227;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  pad: 25px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 7px;
+  background-color: transparent;
+  border: 1px solid #dbf227;
+  color: #fff;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 7px 17px;
+
+  background-color: #cecd95b3;
+  border: 1px solid #050b41;
+  cursor: pointer;
+
+  transition: background-color 250ms linear;
+}
+
+.search-btn {
+  width: 50px;
+}
+.load-more {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 150px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.load-more:hover,
+.load-more:focus {
+  border: 2px solid #dbf227;
+  background-color: #042940;
+  color: #fff;
+}
+.search-btn:hover,
+.search-btn:focus {
+  background-color: #042940;
+  border: 1px solid #dbf227;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.gallery {
+  display: grid;
+  max-width: 1440px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 240px;
+  grid-gap: 15px;
+  justify-content: center;
+  max-width: calc(100vw - 80px);
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: unset;
+  object-fit: cover;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 250ms;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+.photo-card {
+  border-radius: 10px;
+  position: relative;
+  /* filter: drop-shadow(0 0 10px #0ff); */
+  flex-direction: column;
+  transition: filter 0.5s ease-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.info {
+  padding-left: 10px;
+  padding-bottom: 5px;
+  background-color: #fff;
+  color: #050b41;
+  z-index: 10;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  font-size: large;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  font-size: 14px;
+}
+
+.photo-card:hover .info {
+  transform: translateY(0);
+}
+.is-hidden {
+  display: none;
+}
+
+.btn.disabled,
+.btn:disabled {
+  opacity: 0.6;
+}
